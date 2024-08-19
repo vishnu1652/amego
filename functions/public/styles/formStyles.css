@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003260;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #ffffff;
+}
+
+.header-left, .header-center, .header-right {
+    flex: 1;
+}
+
+.header-left {
+    display: flex;
+}
+
+.logo {
+        max-height: 80px; /* Adjust the size of the image */
+        mix-blend-mode: multiply; /* Example blend mode */
+}
+
+.header-center {
+    text-align: center;
+    color: #ffffff;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; /* Space between icons */
+}
+
+.icon {
+    color: #ffffff; /* Default icon color */
+    font-size: 24px; /* Size of the icons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.icon:hover {
+    color: #007bff; /* Color on hover */
+}
+.h3{
+   color: #ffffff;
+   font-size: small;
+}
+.header-two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}.h2{
+    color: #003260 !important;
+    font-size: 50px !important;
+}
+.title-header-wrapper {
+    position: relative; /* Ensure the child elements can be positioned relative to this container */
+    width: 100%;
+}
+
+.title-header-bg {
+    background-size: cover; /* Ensures the image covers the background area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 400px; /* Adjust height as needed */
+    display: flex; /* Uses flexbox for aligning items */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+}
+.learning{
+    margin-right: 400px !important;
+}
+.title-header-section {
+    color: #fff; /* Sets the text color to white */
+}
+.title-text{
+    margin-right: 750px;
+
+}
+
+.title-header-section h2 {
+    font-size: 2em; /* Adjust size as needed */
+    margin: 0; /* Removes default margin */
+}
+
+.title-header-section p {
+    font-size: 1.2em; /* Adjust size as needed */
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.container{
+    max-width: 900px !important;
+    margin-top: 50px !important;
+}
+input.form-control {
+    border-color: #3278ad !important; /* Default border color */
+    height: 45px !important;
+}
+
+input.form-control:focus {
+    border-color: #3278ad !important; /* Border color on focus */
+    box-shadow: none !important; /* Removes default Bootstrap focus shadow */
+}
+.let{
+    text-align: center !important;
+}
+.connect{
+    color: #003260 !important;
+}
+/* Additional styles to ensure responsive behavior */
+@media (max-width: 768px) {
+    .title-header-bg {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .title-header-section h2 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .title-header-section p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+   
+}

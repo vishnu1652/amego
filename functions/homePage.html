@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #003260;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            color: #ffffff;
+        }
+
+        .header-left, .header-center, .header-right {
+            flex: 1;
+        }
+
+        .header-left {
+            display: flex;
+        }
+
+        .logo {
+            max-height: 80px; /* Adjust the size of the image */
+            mix-blend-mode: multiply; /* Example blend mode */
+        }
+
+        .header-center {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px; /* Space between icons */
+        }
+
+        .icon {
+            color: #ffffff; /* Default icon color */
+            font-size: 24px; /* Size of the icons */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .icon:hover {
+            color: #007bff; /* Color on hover */
+        }
+        .h3{
+            color: #ffffff;
+            font-size: small;
+        }
+        .header-two{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .h2{
+            color: #003260 !important;
+            font-size: 50px !important;
+        }
+        .title-header-wrapper {
+            position: relative; /* Ensure the child elements can be positioned relative to this container */
+            width: 100%;
+        }
+
+        .title-header-bg {
+            background-size: cover; /* Ensures the image covers the background area */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            height: 400px; /* Adjust height as needed */
+            display: flex; /* Uses flexbox for aligning items */
+            align-items: center; /* Vertically centers content */
+            justify-content: center; /* Horizontally centers content */
+        }
+        .learning{
+            margin-right: 400px !important;
+        }
+        .title-header-section {
+            color: #fff; /* Sets the text color to white */
+        }
+        .title-text{
+            margin-right: 750px;
+        }
+
+        .title-header-section h2 {
+            font-size: 2em; /* Adjust size as needed */
+            margin: 0; /* Removes default margin */
+        }
+
+        .title-header-section p {
+            font-size: 1.2em; /* Adjust size as needed */
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .container{
+            max-width: 900px !important;
+            margin-top: 50px !important;
+        }
+        input.form-control {
+            border-color: #3278ad !important; /* Default border color */
+            height: 45px !important;
+        }
+
+        input.form-control:focus {
+            border-color: #3278ad !important; /* Border color on focus */
+            box-shadow: none !important; /* Removes default Bootstrap focus shadow */
+        }
+        .let{
+            text-align: center !important;
+        }
+        .connect{
+            color: #003260 !important;
+        }
+        /* Additional styles to ensure responsive behavior */
+        @media (max-width: 768px) {
+            .title-header-bg {
+                height: 200px; /* Adjust height for smaller screens */
+            }
+
+            .title-header-section h2 {
+                font-size: 1.5em; /* Adjust font size for smaller screens */
+            }
+
+            .title-header-section p {
+                font-size: 1em; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <h4 class="h3">Learn more about the amazing work we do!</h4>
+        </div>
+        <div class="header-right">
+            <a href="https://www.facebook.com" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+    <header class="header-two">
+        <div class="header-left">
+            <img src="/images/amego.png" alt="Logo" class="logo">
+        </div>
+        <div class="learning">
+            <p class="h2">Learning Platform</p>
+        </div>
+    </header>
+    <div>
+        <div class="row-fluid">
+            <div class="title-header-bg" style="background-image: url('https://www.amegoinc.org/hubfs/contact%20us%205.png');">
+                <div class="title-header-section">
+                    <div class="title-text">
+                        <h2>Innovative Learning Journey</h2>
+                        <p>Amego’s learning and development journey helps you excel through top-notch, innovative solutions.</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="let connect">Let's Connect</h2>
+        <p class="let">Please fill out the form below and we'll get back to you within 24 hours.</p>
+        <form id="contactForm" action="/submit" method="post">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    <span id="firstNameError" class="error"></span>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    <span id="lastNameError" class="error"></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <span id="emailError" class="error"></span>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <span id="passwordError" class="error"></span>
+                </div>
+                <div class="col-md-6">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                    <span id="confirmPasswordError" class="error"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    <!-- <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            let isValid = true;
+
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Clear previous error messages
+            document.getElementById('firstNameError').textContent = '';
+            document.getElementById('lastNameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            document.getElementById('confirmPasswordError').textContent = '';
+
+            // Validate required fields
+            if (!firstName) {
+                document.getElementById('firstNameError').textContent = 'First Name is required.';
+                isValid = false;
+            }
+            if (!lastName) {
+                document.getElementById('lastNameError').textContent = 'Last Name is required.';
+                isValid = false;
+            }
+            if (!email) {
+                document.getElementById('emailError').textContent = 'Email is required.';
+                isValid = false;
+            }
+            if (!password) {
+                document.getElementById('passwordError').textContent = 'Password is required.';
+                isValid = false;
+            }
+            if (!confirmPassword) {
+                document.getElementById('confirmPasswordError').textContent = 'Confirm Password is required.';
+                isValid = false;
+            }
+
+            // Validate passwords match
+            if (password !== confirmPassword) {
+                document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
